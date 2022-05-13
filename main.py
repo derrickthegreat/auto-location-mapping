@@ -5,12 +5,13 @@ import subprocess
 
 # User Input
 input_entry_finished = False
+default_path = 'google-earth.xlsx'
 
 while not input_entry_finished:
     # File Path & Name Insured Entry
     file_path = input('Please enter file path: ')
     if not file_path:
-        file_path = 'address-list.xlsx'
+        file_path = default_path
     print()
     named_insured = input('Please enter insureds name: ')
     print()
@@ -18,7 +19,7 @@ while not input_entry_finished:
     # Review & Confirm
     print('You have entered:')
     print('1) File path: ', file_path)
-    print('Named Insured: ', named_insured)
+    print('2) Named Insured: ', named_insured)
     finished = input('Is this correct? [Y/n]: ')
     if finished == 'Y' | finished == 'y' | finished == False:
         input_entry_finished = True
