@@ -14,6 +14,8 @@ while not input_entry_finished:
         file_path = default_path
     print()
     named_insured = input('Please enter insureds name: ')
+    if not named_insured:
+        named_insured = input('Please enter the named insured: ')
     print()
 
     # Review & Confirm
