@@ -1,4 +1,4 @@
-import pag as pag
+import pyautogui as pag
 import pandas as pd
 import subprocess
 
