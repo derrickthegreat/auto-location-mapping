@@ -7,9 +7,6 @@ import subprocess
 input_entry_finished = False
 default_path = './google-earth.xlsx'
 
-print('Google Earth Mapping Automation v1.0\n by Derrick Alvarez')
-print('Before you begin, please make sure to have\n 1) Google Earth Pro already open\n 2) Formatted Address List per README.md\n')
-
 # Functions
 def toggle_sidebar():
     with pag.hold(['ctrl', 'alt']):
@@ -19,6 +16,8 @@ def clear_search():
     with pag.hold('ctrl'):
         pag.press('a')
         pag.press('delete')
+
+print('Auto Location Mapping v1.1.0','\n','by Derrick Alvarez','\n')
 
 # User Input
 while not input_entry_finished:

@@ -1,8 +1,7 @@
-# Google Earth Mapping Automation
+# Auto Location Mapping v1.1.0
 
 ## Dependencies:
 
-- Python 2 or higher
 - pyautogui
 - pandas
 
