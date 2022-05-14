@@ -1,4 +1,4 @@
-# Location Mapping Automation
+# Google Earth Mapping Automation
 
 ## Dependencies:
 
@@ -6,10 +6,8 @@
 - pyautogui
 - pandas
 
-## How to Use
 
-1. Enter file path
-	* if nothing is entered, the path will default to './google-earth.xlsx'
-2. Enter *Named Insured*
-3. Confirm entries and let the script run.
-4. The KMZ file will be dropped in the KMZ files folder once script is done running.
+**Before running the script, please make sure that:**
+
+1. Google Earth is launched.
+2. The location spreadsheet includes a column titled 'address' (case-sensitive) with the search terms.
