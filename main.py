@@ -1,10 +1,11 @@
 import pyautogui as pag
 import pandas as pd
 import time
+import subprocess
 
 # User Input
 input_entry_finished = False
-default_path = 'google-earth.xlsx'
+default_path = './google-earth.xlsx'
 
 print('Google Earth Mapping Automation v1.0\n by Derrick Alvarez')
 print('Before you begin, please make sure to have\n 1) Google Earth Pro already open\n 2) Formatted Address List per README.md\n')
@@ -46,8 +47,8 @@ while not input_entry_finished:
 excel_data = pd.read_excel(file_path)
 
 # Go to Google Earth & Set Up Folder
-with pag.hold('alt'):
-    pag.press('tab')
+subprocess.Popen('google-earth-pro')
+time.sleep(3)
 toggle_sidebar()
 with pag.hold(['ctrl', 'shift']):
     pag.press('n')
@@ -62,13 +63,13 @@ while count < num_of_locations:
     # Enter address
     pag.typewrite(address)
     pag.press('enter')
-    time.sleep(1)
+    time.sleep(0.5)
     # Save / Drop Pin
     with pag.hold(['ctrl', 'shift']):
         pag.press('p')
     pag.typewrite(address)
     pag.press('enter')
-    time.sleep(1)
+    time.sleep(0.5)
 
     clear_search()
     count += 1
