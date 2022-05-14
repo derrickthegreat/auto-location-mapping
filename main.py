@@ -37,7 +37,7 @@ while not input_entry_finished:
     print('You have entered:\n')
     print('1) Named Insured: ', named_insured)
     print('2) File Path: ', file_path)
-    print('3) Number of Rows: ', num_of_locations, '\n')
+    print('3) Number of Locations: ', num_of_locations, '\n')
     finished = input('Is this correct? [Y/n]: ')
     if finished == 'Y' or finished == 'y' or finished == '':
         input_entry_finished = True
