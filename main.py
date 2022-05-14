@@ -48,7 +48,7 @@ pag.write(named_insured)
 pag.press('enter')
 pag.press('tab')
 
-time.sleep(1)
+time.sleep(0.5)
 
 # Iterate through Excel
 count = 0
@@ -58,13 +58,13 @@ def clear_search():
         pag.press('a')
         pag.press('delete')
 
-while count < 1:
+while count < rows:
     address = excel_data['address'][count]
     # Enter address
     pag.typewrite(address)
     pag.press('enter')
-    time.sleep(1)
 
+    time.sleep(1)
     # Save / Drop Pin
     with pag.hold(['ctrl', 'shift']):
         pag.press('p')
