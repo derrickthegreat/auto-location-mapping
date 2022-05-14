@@ -2,6 +2,7 @@
 
 ## Dependencies:
 
+- Google Earth
 - pyautogui
 - pandas
 
