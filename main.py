@@ -22,15 +22,15 @@ print('Auto Location Mapping v1.1.0','\n','by Derrick Alvarez','\n')
 # User Input
 while not input_entry_finished:
     #Name, file & # of locations
-    named_insured = input('Please enter the Named Insured [string]:')
+    named_insured = input('Please enter the Named Insured: ')
     if not named_insured:
         named_insured = input('Please enter the named insured: ')
-    file_path = input('Please enter file path [string]:')
+    file_path = input('Please enter file path [string]: ')
     if not file_path:
         file_path = default_path
-    num_of_locations = int(input('How many locations are there? [int]:'))
+    num_of_locations = int(input('How many locations are there? [int]: '))
     if not num_of_locations:    
-        num_of_locations = int(input('How many locations are there? [int]:'))
+        num_of_locations = int(input('How many locations are there? [int]: '))
     print()
 
     # Review & Confirm
