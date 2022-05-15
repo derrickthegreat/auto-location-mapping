@@ -1,8 +1,0 @@
-README.md
-setup.py
-auto_location_mapping.egg-info/PKG-INFO
-auto_location_mapping.egg-info/SOURCES.txt
-auto_location_mapping.egg-info/dependency_links.txt
-auto_location_mapping.egg-info/entry_points.txt
-auto_location_mapping.egg-info/requires.txt
-auto_location_mapping.egg-info/top_level.txt
