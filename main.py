@@ -2,6 +2,7 @@ import pyautogui as pag
 import pandas as pd
 import time
 import subprocess
+import sys
 
 
 # Functions
@@ -14,14 +15,36 @@ def clear_search():
         pag.press('a')
         pag.press('delete')
 
-def automap():
-    print('Auto Location Mapping v1.1.0','\n','by Derrick Alvarez','\n')
+def sys_compatible():
+    platforms = {
+        'win32' : 'Windows',
+        'linux' : 'Linux',
+        'linux2' : 'Linux'
+    }
+    if sys.platform not in platforms:
+        return False
+    return [True, platforms[sys.platform]]
 
+def automap():
+    print('Auto Location Mapping v1.2.0','\n','by Derrick Alvarez','\n')
+    print()
+    print('Checking OS...')
+    os = sys_compatible()
+    if not os:
+        return print('This OS is not supported yet.')
+    elif os[1] == 'Linux':
+        print('Running on Linux ;-)')
+        google_earth = 'google-earth-pro'
+    else:
+        print('Running on Windows')
+        google_earth = 'C:\Program Files\Google Earth Pro\client\googleearth.exe'
+    
     input_entry_finished = False
     default_path = './google-earth.xlsx'
     
     # User Input
     while not input_entry_finished:
+        print()
         #Name, file & # of locations
         named_insured = input('Please enter the Named Insured: ')
         if not named_insured:
@@ -47,7 +70,7 @@ def automap():
     excel_data = pd.read_excel(file_path)
 
     # Go to Google Earth & Set Up Folder
-    subprocess.Popen('google-earth-pro')
+    subprocess.Popen(google_earth)
     time.sleep(3)
     toggle_sidebar()
     with pag.hold(['ctrl', 'shift']):
