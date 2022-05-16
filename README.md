@@ -1,7 +1,8 @@
 # Auto Location Mapping v1.2.3
 
 Auto location mapping tool to help map a list of address stored in a .xlsx file.
-Currently works on Windows & Linux.
+
+Currently works on Windows & Linux only.
 
 ## Prerequisites:
 
@@ -21,7 +22,7 @@ git clone https://github.com/derrickthegreat/auto-location-mapping.git
 > #### Install the tool
 
 ```bash
-pip install -e auto-location-mapping
+pip install auto-location-mapping
 ```
 > #### Run the tool anywhere via cli
 
@@ -35,5 +36,4 @@ automap
 **Before running the script, please make sure that:** 
 
  The location spreadsheet includes a column titled *'address'* (case-sensitive) with the search terms.
-
 The **File path** is based on where you open the `automap` command.
