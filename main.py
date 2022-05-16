@@ -26,7 +26,7 @@ def sys_compatible():
     return [True, platforms[sys.platform]]
 
 def automap():
-    print('Auto Location Mapping v1.2.0','\n','by Derrick Alvarez','\n')
+    print('Auto Location Mapping v1.2.1','\n','by Derrick Alvarez','\n')
     print()
     print('Checking OS...')
     os = sys_compatible()
@@ -38,6 +38,7 @@ def automap():
     else:
         print('Running on Windows')
         google_earth = 'C:\Program Files\Google Earth Pro\client\googleearth.exe'
+        print('google earth path: ', google_earth)
     
     input_entry_finished = False
     default_path = './google-earth.xlsx'
