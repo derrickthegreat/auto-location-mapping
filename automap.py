@@ -25,8 +25,8 @@ def sys_compatible():
         return False
     return [True, platforms[sys.platform]]
 
-def automap():
-    print('Auto Location Mapping v1.2.3','\n','by Derrick Alvarez','\n')
+def main():
+    print('Auto Location Mapping v1.2.4','\n','by Derrick Alvarez','\n')
     print()
     print('Checking OS...')
     os = sys_compatible()
@@ -97,4 +97,5 @@ def automap():
     toggle_sidebar()
     print('\nAll addresses have been entered!')
 
-automap()
+if __name__ == "__main__":
+    main()
