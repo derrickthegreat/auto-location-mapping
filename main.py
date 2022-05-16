@@ -26,7 +26,7 @@ def sys_compatible():
     return [True, platforms[sys.platform]]
 
 def automap():
-    print('Auto Location Mapping v1.2.2','\n','by Derrick Alvarez','\n')
+    print('Auto Location Mapping v1.2.3','\n','by Derrick Alvarez','\n')
     print()
     print('Checking OS...')
     os = sys_compatible()
@@ -47,22 +47,18 @@ def automap():
     while not input_entry_finished:
         print()
         #Name, file & # of locations
-        named_insured = input('Please enter the Named Insured: ')
-        if not named_insured:
-            named_insured = input('Please enter the named insured: ')
-        file_path = input('Please enter file path [string]: ')
+        collection_name = input('Please enter the Collection Name: ')
+        if not collection_name:
+            collection_name = input('Please enter the Collection Name: ')
+        file_path = input('Please enter file path: ')
         if not file_path:
             file_path = default_path
-        num_of_locations = int(input('How many locations are there? [int]: '))
-        if not num_of_locations:    
-            num_of_locations = int(input('How many locations are there? [int]: '))
         print()
 
         # Review & Confirm
         print('You have entered:\n')
-        print('1) Named Insured: ', named_insured)
+        print('1) Collection Name: ', collection_name)
         print('2) File Path: ', file_path)
-        print('3) Number of Locations: ', num_of_locations, '\n')
         finished = input('Is this correct? [Y/n]: ')
         if finished == 'Y' or finished == 'y' or finished == '':
             input_entry_finished = True
@@ -76,13 +72,13 @@ def automap():
     toggle_sidebar()
     with pag.hold(['ctrl', 'shift']):
         pag.press('n')
-    pag.write(named_insured)
+    pag.write(collection_name)
     pag.press('enter')
 
     # Iterate through Excel
     count = 0
 
-    while count < num_of_locations:
+    for row in excel_data['address']:
         address = excel_data['address'][count]
         # Enter address
         pag.typewrite(address)

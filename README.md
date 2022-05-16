@@ -1,6 +1,7 @@
-# Auto Location Mapping v1.2.2
+# Auto Location Mapping v1.2.3
 
 Auto location mapping tool to help map a list of address stored in a .xlsx file.
+Currently works on Windows & Linux.
 
 ## Prerequisites:
 
