@@ -1,4 +1,4 @@
-# Auto Location Mapping v1.2.1
+# Auto Location Mapping v1.2.2
 
 Auto location mapping tool to help map a list of address stored in a .xlsx file.
 

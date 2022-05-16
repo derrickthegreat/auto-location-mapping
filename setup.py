@@ -1,7 +1,7 @@
 from setuptools import setup
 setup(
     name='auto-location-mapping',
-    version='1.2.1',
+    version='1.2.2',
     author='Derrick Alvarez',
     author_email='derrickcanbereached@gmail.com',
     install_requires=['pandas','pyautogui'],
