@@ -7,6 +7,6 @@ setup(
     install_requires=['pandas','pyautogui'],
     entry_points='''
         [console_scripts]
-        automap=main
+        automap=main:automap
     ''',
  )
