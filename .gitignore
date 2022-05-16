@@ -1,4 +1,4 @@
 google-earth.xlsx
-__pychache__/
-.idea/
-auto_location_mapping.egg-info/
+*/
+*.spec
+main.exe

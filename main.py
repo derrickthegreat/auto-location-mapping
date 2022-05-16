@@ -100,3 +100,5 @@ def automap():
 
     toggle_sidebar()
     print('\nAll addresses have been entered!')
+
+automap()
