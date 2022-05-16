@@ -37,8 +37,7 @@ def automap():
         google_earth = 'google-earth-pro'
     else:
         print('Running on Windows')
-        google_earth = 'C:\Program Files\Google Earth Pro\client\googleearth.exe'
-        print('google earth path: ', google_earth)
+        google_earth = [r"C:\Program Files\Google Earth Pro\client\googleearth.exe"]
     
     input_entry_finished = False
     default_path = './google-earth.xlsx'
