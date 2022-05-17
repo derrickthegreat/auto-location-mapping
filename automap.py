@@ -1,5 +1,6 @@
 import pyautogui as pag
 import pandas as pd
+from progress.spinner import MoonSpinner
 import time
 import subprocess
 import sys
@@ -78,21 +79,25 @@ def main():
     # Iterate through Excel
     count = 0
 
-    for row in excel_data['address']:
-        address = excel_data['address'][count]
-        # Enter address
-        pag.typewrite(address)
-        pag.press('enter')
-        time.sleep(0.5)
-        # Save / Drop Pin
-        with pag.hold(['ctrl', 'shift']):
-            pag.press('p')
-        pag.typewrite(address)
-        pag.press('enter')
-        time.sleep(0.5)
+    print()
+    with MoonSpinner('Processing...') as bar:
+        for row in excel_data['address']:
+            address = excel_data['address'][count]
+            # Enter address
+            pag.typewrite(address)
+            pag.press('enter')
+            time.sleep(0.5)
+            # Save / Drop Pin
+            with pag.hold(['ctrl', 'shift']):
+                pag.press('p')
+            pag.typewrite(address)
+            pag.press('enter')
+            time.sleep(0.5)
 
-        clear_search()
-        count += 1
+            clear_search()
+            count += 1
+            time.sleep(0.02)
+            bar.next()
 
     toggle_sidebar()
     print('\nAll addresses have been entered!')
