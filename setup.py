@@ -4,7 +4,7 @@ setup(
     version='1.2.4',
     author='Derrick Alvarez',
     author_email='derrickcanbereached@gmail.com',
-    install_requires=['pandas','pyautogui'],
+    install_requires=['pandas','pyautogui', 'openpyxl'],
     entry_points='''
         [console_scripts]
         automap=automap:main

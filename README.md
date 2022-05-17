@@ -9,6 +9,7 @@ Currently works on Windows & Linux only.
 - [Google Earth](https://www.google.com/earth/versions/)
 - [Python](https://www.python.org/downloads/)
 - [pyautogui](https://pyautogui.readthedocs.io/en/latest/)
+- [openpyxl](https://openpyxl.readthedocs.io/en/stable/)
 - [pandas](https://pandas.pydata.org/docs/getting_started/index.html)
 
 ## Getting Started:
